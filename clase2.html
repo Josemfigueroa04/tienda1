@@ -37,6 +37,7 @@
         .form-container{
             width: 300px;
             display: grid;
+            
         }
 
         .logoinicio{
@@ -60,24 +61,21 @@
             margin-bottom: 32px;
         }
 
-        .form{
-            display: flex;
-            flex-direction: column;
-        }
-        .label{
-            font-weight: bold;
-            font-size: var(--md);
-            margin-bottom: 8px;
-        }
-        .input-password{
+        .imagen-email{
             background-color: var(--text-input-field);
-            border-radius: 10px;
-            font-size: var(--sm);
-            padding: 6px;
-            border: none;
-            height: 30px;
-            margin-bottom: 8px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            justify-self: center;
+   
         }
+        .imagen-email img{
+            width: 80px;
+        }
+    
 
         .confirmarcontraseña{
             height: 30px;
@@ -90,6 +88,18 @@
             border: none;
             margin-top: 8px;
             margin-bottom: 8px;
+        }
+        .texto-envio{
+            text-align: center;
+            font-size: var(--sm);
+            color: var(--very-light-pink);
+
+        }
+
+        .resend-a{
+            text-decoration: none;
+            color: var(--hospital-green);
+
         }
         
         @media (max-width:640px) {
@@ -107,17 +117,18 @@
     <div class="login">
         <div class="form-container"> 
             <img src="./asset/logos/logo_yard_sale.svg" alt="logo" class="logoinicio">
-            <h1 class="titulo">Create a new password</h1>
-            <p class="subtitulo">Enter a new password for you account</p>
-                <form action="/" class="form">
-                  
-                        <label for="password1" class="label">Password</label>
-                        <input class="input-password"type="password" placeholder="*******" >
-                                       
-                        <label for="password2" class="label">Re-Enter Password</label>
-                        <input class="input-password" type="re-ender-password" placeholder="*******" >
+            <h1 class="titulo">¡Email has been sent!</h1>
+            <p class="subtitulo">please check your inbox for instructions on how to reset the password</p>
+            <div class="imagen-email"><img src="./asset/icons/email.svg" alt=""></div>
+               
                     
-                        <button class="confirmarcontraseña">Confirm new password</button>
+                <button class="confirmarcontraseña">login</button>
+                <p class="texto-envio">
+                    <span>Did't receive the email? </span>
+                    <a href="#" class="resend-a">Resend</a>
+                </p> 
+
+
 
                 </form>
         </div>
